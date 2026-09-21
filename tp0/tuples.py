@@ -10,7 +10,7 @@ releves = [releve1, releve2, releve3]
 assert len(releves) == 3
 assert releves[0][0] == "laser_avant"
 assert afficher_releve(releve1) == "Capteur laser_avant : 2.35 m"
-assert afficher_releve(releve2) == "Capteur laser_arriere : 1.1 m"
+assert afficher_releve(releve2) == "Capteur laser_arriere : 1.1 m" #renvoie 1.1  et pas 1.10
 assert afficher_releve(releve3) == "Capteur gyroscope : 87.5 deg"
 
 def recalibrer(releves,nom_capteur,valeur):

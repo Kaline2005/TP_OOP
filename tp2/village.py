@@ -5,6 +5,9 @@ class Village:
         self.nom = nom
         self.__habitants = [] #On créer une liste vide pour stocker les habitants du village
 
+    def get_habitants(self):
+        return self.__habitants
+    
     def ajouter_habitant_composition(self,nom,age,adresse,animaux=None):
         nouvel_habitant = Habitant(nom,age,adresse,animaux) #On crée un nouvel habitant
         self.__habitants.append(nouvel_habitant) #On ajoute l'habitant à la liste des habitants du village
@@ -21,7 +24,7 @@ pytown.ajouter_habitant_composition("Aldric", 25, "Rue A", {"vaches": 3})
 elise = Habitant("Elise", 28, "Rue B", {"poules": 10})
 pytown.ajouter_habitant_aggregation(elise)
 autre_village = Village("VillageVoisin")
-autre_village.ajouter_habitant_agregation(elise) # meme habitant dans 2 villages
+autre_village.ajouter_habitant_aggregation(elise) # meme habitant dans 2 villages
 assert len(pytown.get_habitants()) == 2
 assert elise in autre_village.get_habitants()
 

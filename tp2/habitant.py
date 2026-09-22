@@ -3,9 +3,9 @@ class Habitant:
         self.nom = nom
         self.age = age
         self.adresse = adresse
-        self.animaux = animaux if animaux is not None else {}
+        self.animaux = animaux if animaux is not None else {}  #On n'écrit pas animaux={} dans le init sinon le dict serait partagé par tous les habitant
 
-    def affichage_adresse(self):
+    def affichage_adresse(self): #methode
         print(f"{self.nom} habite à {self.adresse}")
 
     def compte_animal(self,animal):
